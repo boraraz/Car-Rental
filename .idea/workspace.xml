@@ -4,25 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e2bb3a34-aa9b-4267-b2fa-5de67279efda" name="Changes" comment="initial commit">
-      <change afterPath="$PROJECT_DIR$/src/Car_Reservation.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/HomeScreen.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/images/1.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/images/10.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/images/11.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/images/12.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/images/13.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/images/14.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/images/15.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/images/2.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/images/3.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/images/4.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/images/5.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/images/6.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/images/7.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/images/8.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/images/9.jpg" afterDir="false" />
+    <list default="true" id="e2bb3a34-aa9b-4267-b2fa-5de67279efda" name="Changes" comment="changes on some pages">
+      <change afterPath="$PROJECT_DIR$/cars.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Invoice.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Car_Reservation.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Car_Reservation.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/HomeScreen.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/HomeScreen.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/SigninScreen.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/SigninScreen.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/SignupScreen.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/SignupScreen.java" afterDir="false" />
     </list>
@@ -50,15 +37,19 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;/Users/boraraz/Documents/Documents - Bora’s MacBook Pro - 1/GitHub/Car-Rental/Car_Rental&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "last_opened_file_path": "/Users/boraraz/Documents/Documents - Bora’s MacBook Pro - 1/GitHub/Car-Rental/Car_Rental",
+    "settings.editor.selected.configurable": "preferences.customizations"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/src/images" />
     </key>
@@ -88,7 +79,14 @@
       <option name="project" value="LOCAL" />
       <updated>1669829959315</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="changes on some pages">
+      <created>1671291395505</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1671291395505</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -104,6 +102,11 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="initial commit" />
-    <option name="LAST_COMMIT_MESSAGE" value="initial commit" />
+    <MESSAGE value="changes on some pages" />
+    <option name="LAST_COMMIT_MESSAGE" value="changes on some pages" />
+  </component>
+  <component name="XSLT-Support.FileAssociations.UIState">
+    <expand />
+    <select />
   </component>
 </project>
