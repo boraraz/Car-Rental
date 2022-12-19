@@ -50,6 +50,7 @@ public class OnboardingScreen extends JFrame implements ActionListener {
             sgn_in.setResizable(false);
 
             sgn_in.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+            dispose();
         }
         else if(e.getSource() == sign_up_btn){
             setVisible(false);
@@ -59,6 +60,7 @@ public class OnboardingScreen extends JFrame implements ActionListener {
             sgnup.setResizable(false);
 
             sgnup.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+            dispose();
         }
     }
 }

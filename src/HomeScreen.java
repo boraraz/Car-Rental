@@ -6,9 +6,15 @@ import java.awt.event.ActionListener;
 import java.text.ParseException;
 
 public class HomeScreen extends JFrame implements ActionListener {
+    public int getI() {
+        return i;
+    }
+    public String[][] getCars() {
+        return cars;
+    }
+
     private int i;
     private String[][] cars;
-    private Car_Reservation cR;
     private JLabel welcome;
     private JButton[] btn = new JButton[15];
     private JButton logout;
@@ -79,18 +85,21 @@ public class HomeScreen extends JFrame implements ActionListener {
 
     @Override
     public void actionPerformed(ActionEvent e) {
+        int id = 0;
+
         for (i = 0;i<15;i++){
-
-                cR = new Car_Reservation(i,cars);
-
             if (e.getSource() == btn[i]){
-                setVisible(false);
-                cR.setVisible(true);
-                cR.setSize(250,900);
-
-                cR.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-
+                id = i;
             }
+        }
+        if (e.getSource() == btn[id]){
+            Car_Reservation cR = new Car_Reservation(id,cars);
+            setVisible(false);
+            cR.setVisible(true);
+            cR.setSize(250,900);
+
+            cR.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+            dispose();
         }
         if(e.getSource() == logout){
             OnboardingScreen onBoardScrn = new OnboardingScreen();
@@ -102,6 +111,7 @@ public class HomeScreen extends JFrame implements ActionListener {
             onBoardScrn.setResizable(false);
 
             onBoardScrn.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+            dispose();
         }
     }
 }

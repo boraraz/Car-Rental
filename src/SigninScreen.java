@@ -10,7 +10,7 @@ public class SigninScreen extends JFrame implements ActionListener {
 
     private HomeScreen hm = new HomeScreen();
     private JLabel signin, usernameL, passL;
-    private JButton signinB;
+    private JButton signinB, back;
     private JTextField usernameT, passT;
 
     private static String personInfo;
@@ -31,8 +31,10 @@ public class SigninScreen extends JFrame implements ActionListener {
         passT = new JTextField(20);
 
         signinB = new JButton("Sign In");
+        back = new JButton("Back");
 
         setLayout(new FlowLayout());
+        add(back);
         add(signin);
         add(usernameL);
         add(usernameT);
@@ -45,6 +47,15 @@ public class SigninScreen extends JFrame implements ActionListener {
 
     @Override
     public void actionPerformed(ActionEvent e) {
+        if (e.getSource() == back){
+            OnboardingScreen oS = new OnboardingScreen();
+            oS.setVisible(true);
+            oS.setSize(300,200);
+            oS.setVisible(true);
+
+            oS.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+            dispose();
+        }
         if (e.getSource() == signinB){
             String username = usernameT.getText();
             String password = passT.getText();
@@ -84,8 +95,8 @@ public class SigninScreen extends JFrame implements ActionListener {
                     hm.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
                     dispose();
                 }
-            }catch (IOException ie) {ie.printStackTrace();
-            }catch (Exception ex){ex.printStackTrace();}
+            } catch (Exception ie) {ie.printStackTrace();
+            }
 
 
         }

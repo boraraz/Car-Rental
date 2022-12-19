@@ -4,12 +4,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e2bb3a34-aa9b-4267-b2fa-5de67279efda" name="Changes" comment="changes on some pages">
-      <change afterPath="$PROJECT_DIR$/cars.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Invoice.java" afterDir="false" />
+    <list default="true" id="e2bb3a34-aa9b-4267-b2fa-5de67279efda" name="Changes" comment="made some addition and changes. IDK how to name commits well, sorry.">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/reservation.txt" beforeDir="false" afterPath="$PROJECT_DIR$/reservation.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Car_Reservation.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Car_Reservation.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/HomeScreen.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/HomeScreen.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Invoice.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Invoice.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/OnboardingScreen.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/OnboardingScreen.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/SigninScreen.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/SigninScreen.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/SignupScreen.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/SignupScreen.java" afterDir="false" />
     </list>
@@ -30,6 +31,9 @@
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
+  </component>
+  <component name="ProblemsViewState">
+    <option name="selectedTabId" value="CurrentFile" />
   </component>
   <component name="ProjectId" id="2IGxCV1nAHXmlDjNUh1wbQyHnwx" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
@@ -86,7 +90,14 @@
       <option name="project" value="LOCAL" />
       <updated>1671291395505</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="made some addition and changes. IDK how to name commits well, sorry.">
+      <created>1671400372870</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1671400372870</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -103,7 +114,8 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="initial commit" />
     <MESSAGE value="changes on some pages" />
-    <option name="LAST_COMMIT_MESSAGE" value="changes on some pages" />
+    <MESSAGE value="made some addition and changes. IDK how to name commits well, sorry." />
+    <option name="LAST_COMMIT_MESSAGE" value="made some addition and changes. IDK how to name commits well, sorry." />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

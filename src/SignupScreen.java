@@ -7,7 +7,7 @@ import java.io.IOException;
 
 public class SignupScreen extends JFrame implements ActionListener {
     private JLabel signUp, mailL, passL, usernameL;
-    private JButton signUpB;
+    private JButton signUpB, back;
     private JTextField mailT, passT, usernameT;
 
     public SignupScreen(){
@@ -21,8 +21,10 @@ public class SignupScreen extends JFrame implements ActionListener {
         passT = new JTextField(20);
 
         signUpB = new JButton("Sign Up");
+        back =  new JButton("Back");
 
         setLayout(new FlowLayout());
+        add(back);
         add(signUp);
         add(usernameL);
         add(usernameT);
@@ -33,10 +35,21 @@ public class SignupScreen extends JFrame implements ActionListener {
         add(signUpB);
 
         signUpB.addActionListener(this);
+        back.addActionListener(this);
     }
 
     @Override
     public void actionPerformed(ActionEvent e) {
+        if (e.getSource() == back){
+            OnboardingScreen oS = new OnboardingScreen();
+            setVisible(false);
+            oS.setVisible(true);
+            oS.setSize(300,200);
+            oS.setResizable(false);
+
+            oS.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+            dispose();
+        }
         if(e.getSource()==signUpB) {
             System.out.println(usernameT.getText());
             try {

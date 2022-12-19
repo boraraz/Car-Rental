@@ -14,14 +14,14 @@ import java.util.Locale;
 import java.util.concurrent.TimeUnit;
 
 public class Car_Reservation extends JFrame implements ActionListener {
-    private Invoice invoice = new Invoice();
+    private Invoice invoicePage = new Invoice();
     private ImageIcon carImage;
     private JPanel confirm = new JPanel();
-    private JLabel carImageL, dailyPrice, brand, model, gear, vehicleGrp, fuelType, pickUpLoc, returnLoc, pickUpDate, returnDate;
+    private JLabel carImageL, dailyPriceL, brandL, modelL, gearL, vehicleGrpL, fuelTypeL, pickUpLocL, returnLocL, pickUpDateL, returnDateL;
     private JLabel totalPriceL, dateL;
-    private JButton rentB;
+    private JButton rentB, back;
     private JTextField pickUpDateT, returnDateT, pickUpLocT, returnLocT;
-    private String priceForCalc;
+    private String priceForCalc, dailyPrice, brand, model, gear, vehicleGrp, fuelType;
 
     public String getClientId() {
         return clientId;
@@ -38,22 +38,34 @@ public class Car_Reservation extends JFrame implements ActionListener {
         SigninScreen sign = new SigninScreen();
         String userInfo = sign.getPersonInfo();
         sign.dispose();
+
         //extracting client id
         String arr[] = userInfo.split(" ", 2);
-
         clientId = arr[0];
 
+        //defining car props to local
+        dailyPrice = cars[Id][5];
+        brand =  cars[Id][0];
+        model = cars[Id][1];
+        gear = cars[Id][4];
+        vehicleGrp = cars[Id][3];
+        fuelType = cars[Id][2];
+
+        //buttons
         rentB = new JButton("Rent");
-        dailyPrice = new JLabel("Daily Price: $" + cars[Id][5]);
-        brand = new JLabel("Brand: " + cars[Id][0]);
-        model = new JLabel("Model: " + cars[Id][1]);
-        gear = new JLabel("Gear Type: " + cars[Id][4]);
-        vehicleGrp = new JLabel("Vehicle Group: " + cars[Id][3]);
-        fuelType = new JLabel("Fuel Type: " + cars[Id][2]);
-        pickUpLoc = new JLabel("Pickup Location: ");
-        returnLoc = new JLabel("Return Location: ");
-        pickUpDate = new JLabel("Pickup Date: ");
-        returnDate = new JLabel("Return Date: ");
+        back = new JButton("Back");
+
+        //label
+        dailyPriceL = new JLabel("Daily Price: $" + dailyPrice);
+        brandL = new JLabel("Brand: " + brand);
+        modelL = new JLabel("Model: " + model);
+        gearL = new JLabel("Gear Type: " + gear);
+        vehicleGrpL = new JLabel("Vehicle Group: " + vehicleGrp);
+        fuelTypeL = new JLabel("Fuel Type: " + fuelType);
+        pickUpLocL = new JLabel("Pickup Location: ");
+        returnLocL = new JLabel("Return Location: ");
+        pickUpDateL = new JLabel("Pickup Date: ");
+        returnDateL = new JLabel("Return Date: ");
 
         pickUpDateT = new JTextField(20);
         returnDateT = new JTextField(20);
@@ -101,36 +113,33 @@ public class Car_Reservation extends JFrame implements ActionListener {
             throw new RuntimeException(e);
         }
         setLayout(new FlowLayout());
+        add(back);
         add(carImageL);
-        add(brand);
-        add(model);
-        add(gear);
-        add(vehicleGrp);
-        add(fuelType);
-        add(pickUpLoc);
+        add(brandL);
+        add(modelL);
+        add(gearL);
+        add(vehicleGrpL);
+        add(fuelTypeL);
+        add(pickUpLocL);
         add(pickUpLocT);
-        add(returnLoc);
+        add(returnLocL);
         add(returnLocT);
-        add(pickUpDate);
+        add(pickUpDateL);
         add(pickUpDateT);
-        add(returnDate);
+        add(returnDateL);
         add(returnDateT);
-        add(dailyPrice);
+        add(dailyPriceL);
         add(rentB);
         add(Confirmation());
+
         rentB.addActionListener(this);
+        back.addActionListener(this);
     }
 
     private JPanel Confirmation(){
-
-
         confirm.setLayout(new FlowLayout());
-
         confirm.setPreferredSize(new Dimension(200,300));
         confirm.setBackground(new Color(41,41,41));
-
-
-
         return confirm;
     }
 
@@ -165,18 +174,26 @@ public class Car_Reservation extends JFrame implements ActionListener {
             confirm.add(dateL);
             try {
                 FileWriter fw = new FileWriter("reservation.txt",true);
-                fw.write(clientId + " " +gear.getText() + " " + fuelType.getText() + " " + vehicleGrp.getText() + " " + pickUpLocT.getText() + " " + returnLocT.getText() + " " + pickUpDateT.getText() + " " +returnDateT.getText());
+                fw.write(clientId + " " + gear + " " + fuelType + " " + vehicleGrp + " " + pickUpLocT.getText() + " " + returnLocT.getText() + " " + pickUpDateT.getText() + " " +returnDateT.getText() + "\n");
                 fw.close();
-            }catch (IOException ie){ie.printStackTrace();
-            }catch (Exception ex){ex.printStackTrace();}
-
-            invoice.setVisible(true);
-
-            invoice.setVisible(true);
-            invoice.setSize(300,200);
+            } catch (Exception ie){ie.printStackTrace();
+            }
 
 
-            invoice.setDefaultCloseOperation(JFrame.HIDE_ON_CLOSE);
+            invoicePage.setVisible(true);
+            invoicePage.setSize(300,200);
+
+            invoicePage.setDefaultCloseOperation(JFrame.HIDE_ON_CLOSE);
+        }
+        if (e.getSource()==back){
+            HomeScreen home = new HomeScreen();
+            setVisible(false);
+            home.setVisible(true);
+            home.setSize(1030,1030);
+            home.setVisible(true);
+
+            home.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+            dispose();
         }
     }
 }
