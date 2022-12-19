@@ -3,7 +3,6 @@ import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
-import java.text.ParseException;
 
 public class HomeScreen extends JFrame implements ActionListener {
     public int getI() {
@@ -17,11 +16,15 @@ public class HomeScreen extends JFrame implements ActionListener {
     private String[][] cars;
     private JLabel welcome;
     private JButton[] btn = new JButton[15];
-    private JButton logout;
+    private JButton logout, carReport, clientReport;
 
     public HomeScreen(){
         logout = new JButton("Logout");
+        carReport = new JButton("Car Report");
+        clientReport = new JButton("Client Report");
+
         welcome = new JLabel("Welcome");
+
 
         setLayout(new FlowLayout());
         getContentPane().setBackground(new Color(160, 192, 255, 255));
@@ -29,6 +32,10 @@ public class HomeScreen extends JFrame implements ActionListener {
         add(logout);
         add(welcome);
         add(createCarSelection());
+        add(carReport);
+        add(clientReport);
+
+        logout.addActionListener(this);
     }
 
     private JPanel createCarSelection(){
@@ -75,7 +82,7 @@ public class HomeScreen extends JFrame implements ActionListener {
         }
 
 
-        carsPanel.setPreferredSize(new Dimension(1000,1000));
+        carsPanel.setPreferredSize(new Dimension(1000,600));
         carsPanel.setBackground(new Color(41,41,41));
 
 
@@ -93,13 +100,13 @@ public class HomeScreen extends JFrame implements ActionListener {
             }
         }
         if (e.getSource() == btn[id]){
-            Car_Reservation cR = new Car_Reservation(id,cars);
+            CarReservation cR = new CarReservation(id,cars);
             setVisible(false);
             cR.setVisible(true);
             cR.setSize(250,900);
 
             cR.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-            dispose();
+
         }
         if(e.getSource() == logout){
             OnboardingScreen onBoardScrn = new OnboardingScreen();
@@ -111,7 +118,7 @@ public class HomeScreen extends JFrame implements ActionListener {
             onBoardScrn.setResizable(false);
 
             onBoardScrn.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-            dispose();
+
         }
     }
 }

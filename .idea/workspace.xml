@@ -4,10 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e2bb3a34-aa9b-4267-b2fa-5de67279efda" name="Changes" comment="made some addition and changes. IDK how to name commits well, sorry.">
+    <list default="true" id="e2bb3a34-aa9b-4267-b2fa-5de67279efda" name="Changes" comment="Invoice page made">
+      <change afterPath="$PROJECT_DIR$/src/CarReportCar.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cars.txt" beforeDir="false" afterPath="$PROJECT_DIR$/car_plates.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/reservation.txt" beforeDir="false" afterPath="$PROJECT_DIR$/reservation.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Car_Reservation.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Car_Reservation.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Car_Reservation.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/CarReservation.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/HomeScreen.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/HomeScreen.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Invoice.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Invoice.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/OnboardingScreen.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/OnboardingScreen.java" afterDir="false" />
@@ -46,8 +48,9 @@
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "jdk.selected.JAVA_MODULE": "JavaSE-1.8",
     "last_opened_file_path": "/Users/boraraz/Documents/Documents - Bora’s MacBook Pro - 1/GitHub/Car-Rental/Car_Rental",
-    "settings.editor.selected.configurable": "preferences.customizations"
+    "settings.editor.selected.configurable": "reference.settings.ide.settings.notifications"
   }
 }]]></component>
   <component name="RecentsManager">
@@ -97,7 +100,14 @@
       <option name="project" value="LOCAL" />
       <updated>1671400372870</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="Invoice page made">
+      <created>1671444701222</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1671444701222</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -115,7 +125,8 @@
     <MESSAGE value="initial commit" />
     <MESSAGE value="changes on some pages" />
     <MESSAGE value="made some addition and changes. IDK how to name commits well, sorry." />
-    <option name="LAST_COMMIT_MESSAGE" value="made some addition and changes. IDK how to name commits well, sorry." />
+    <MESSAGE value="Invoice page made" />
+    <option name="LAST_COMMIT_MESSAGE" value="Invoice page made" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

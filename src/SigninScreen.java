@@ -24,6 +24,7 @@ public class SigninScreen extends JFrame implements ActionListener {
     }
     public SigninScreen(){
         signin = new JLabel("Sign In");
+        signin.setFont(new Font("Sans", Font.PLAIN, 40));
         usernameL = new JLabel("Username:");
         passL = new JLabel("Password:");
 
@@ -43,18 +44,20 @@ public class SigninScreen extends JFrame implements ActionListener {
         add(signinB);
 
         signinB.addActionListener(this);
+        back.addActionListener(this);
     }
 
     @Override
     public void actionPerformed(ActionEvent e) {
         if (e.getSource() == back){
             OnboardingScreen oS = new OnboardingScreen();
+            setVisible(false);
             oS.setVisible(true);
             oS.setSize(300,200);
             oS.setVisible(true);
 
             oS.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-            dispose();
+
         }
         if (e.getSource() == signinB){
             String username = usernameT.getText();

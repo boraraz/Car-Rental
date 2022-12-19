@@ -12,6 +12,7 @@ public class SignupScreen extends JFrame implements ActionListener {
 
     public SignupScreen(){
         signUp = new JLabel("Signup");
+        signUp.setFont(new Font("Sans", Font.PLAIN, 40));
         usernameL = new JLabel("Username:");
         mailL = new JLabel("Mail:");
         passL = new JLabel("Password:");
@@ -48,7 +49,7 @@ public class SignupScreen extends JFrame implements ActionListener {
             oS.setResizable(false);
 
             oS.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-            dispose();
+
         }
         if(e.getSource()==signUpB) {
             System.out.println(usernameT.getText());

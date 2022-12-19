@@ -45,22 +45,22 @@ public class OnboardingScreen extends JFrame implements ActionListener {
         if(e.getSource() == sign_in_btn){
             setVisible(false);
             sgn_in.setVisible(true);
-            sgn_in.setSize(300,200);
+            sgn_in.setSize(280,250);
             sgn_in.setVisible(true);
             sgn_in.setResizable(false);
 
             sgn_in.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-            dispose();
+
         }
         else if(e.getSource() == sign_up_btn){
             setVisible(false);
             sgnup.setVisible(true);
-            sgnup.setSize(300,200);
+            sgnup.setSize(280,300);
             sgnup.setVisible(true);
             sgnup.setResizable(false);
 
             sgnup.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-            dispose();
+
         }
     }
 }
