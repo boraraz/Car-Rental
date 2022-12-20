@@ -18,8 +18,9 @@ public class CarReservation extends JFrame implements ActionListener {
     private JCheckBox trailer,snowChain,navigation,childSeat;
     private JButton rentB, back;
     private JTextField pickUpDateT, returnDateT, pickUpLocT, returnLocT;
-    private String priceForCalc, dailyPrice, brand, model, gear, vehicleGrp, fuelType, userInfo, infoOfRes,clientIdRes, infoOfClient;
-    private int rentQuantity = 0, currentQuantityInt = 0;
+    private String priceForCalc, dailyPrice, brand, model, gear, vehicleGrp, fuelType, userInfo, infoOfRes,clientIdRes, infoOfClient, plate;
+    private int  currentQuantityInt = 0;
+    public static int rentQuantity;
     public int getTotalPrice() {
         return totalPrice;
     }
@@ -56,6 +57,8 @@ public class CarReservation extends JFrame implements ActionListener {
         gear = cars[Id][4];
         vehicleGrp = cars[Id][3];
         fuelType = cars[Id][2];
+        plate = cars[Id][6];
+
 
         //buttons
         rentB = new JButton("Rent");
@@ -194,6 +197,8 @@ public class CarReservation extends JFrame implements ActionListener {
         SimpleDateFormat sdf = new SimpleDateFormat("dd/MM/yyyy", Locale.UK);
 
         if(e.getSource() == rentB){
+            String currentPrice;
+            String currentQuantity;
                 Date pickupDateParse = null;
                 try {
                     pickupDateParse = sdf.parse(pickUpDateT.getText());
@@ -213,7 +218,7 @@ public class CarReservation extends JFrame implements ActionListener {
 
                 try {
                     FileWriter fw = new FileWriter("reservation.txt", true);
-                    fw.write(clientId + " " + gear + " " + fuelType + " " + vehicleGrp + " " + pickUpLocT.getText().replaceAll("\\s", "") + " " + returnLocT.getText().replaceAll("\\s", "") + " " + pickUpDateT.getText() + " " + returnDateT.getText() + "\n");
+                    fw.write(clientId + " " + gear + " " + fuelType + " " + vehicleGrp + " " + pickUpLocT.getText().replaceAll("\\s", "") + " " + returnLocT.getText().replaceAll("\\s", "") + " " + pickUpDateT.getText() + " " + returnDateT.getText() + " " + plate + "\n");
                     fw.close();
                 } catch (Exception ie) {
                     ie.printStackTrace();
@@ -237,25 +242,27 @@ public class CarReservation extends JFrame implements ActionListener {
                     while ((infoOfClient = bufferedReaderClient.readLine()) != null) {
                         if (clientId.equals(clientIdRes)) {
                             String arr[] = infoOfClient.split(" ", 8);
-
-                            String currentPrice = arr[6];
-                            String currentQuantity = arr[7];
+                            currentPrice = arr[6];
+                            currentQuantity = arr[7];
                             currentQuantityInt = Integer.parseInt(currentQuantity);
                             currentQuantityInt += 1;
                             generalTotal = Integer.parseInt(currentPrice) + totalPrice;
-
-                            fwClient.write(userInfo + " " + pickUpLocT.getText().replaceAll("\\s", "") + " " + returnLocT.getText().replaceAll("\\s", "") + " " + generalTotal + " " + currentQuantityInt + "\n");
-                            fwClient.close();
+                            if (bufferedReaderClient.readLine() == null) {
+                                fwClient.write(userInfo + " " + pickUpLocT.getText().replaceAll("\\s", "") + " " + returnLocT.getText().replaceAll("\\s", "") + " " + generalTotal + " " + currentQuantityInt + "\n");
+                                System.out.println("while içi if");
+                                break;
+                            }
                         } else {
-                            fwClient.write(userInfo + " " + pickUpLocT.getText().replaceAll("\\s", "") + " " + returnLocT.getText().replaceAll("\\s", "") + " " + totalPrice + " " + currentQuantityInt + "\n");
-                            fwClient.close();
+                            fwClient.write(userInfo + " " + pickUpLocT.getText().replaceAll("\\s", "") + " " + returnLocT.getText().replaceAll("\\s", "") + " " + totalPrice + " " + rentQuantity + "\n");
+                            System.out.println("else");
+                            break;
                         }
                     }
-                    if (bufferedReaderClient.readLine() == null) {
+                    if (!clientId.equals(clientIdRes)) {
                         fwClient.write(userInfo + " " + pickUpLocT.getText().replaceAll("\\s", "") + " " + returnLocT.getText().replaceAll("\\s", "") + " " + totalPrice + " " + rentQuantity + "\n");
-                        fwClient.close();
+                        System.out.println("if");
                     }
-
+                    fwClient.close();
                 } catch (Exception ie) {
                     ie.printStackTrace();
                 }

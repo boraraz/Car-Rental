@@ -89,7 +89,7 @@ public class SigninScreen extends JFrame implements ActionListener {
                 }
                 if (found==true)
                 {
-
+                    CarReservation.rentQuantity = 0;
                     setVisible(false);
                     hm.setVisible(true);
                     hm.setSize(1030,1030);

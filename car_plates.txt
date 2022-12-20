@@ -1,15 +1,15 @@
-Mercedes-Benz CLA 180d Diesel Automatic 06 ABC 06 0
-Mercedes-Benz C 180 Coupé Gasoline Automatic 06 DOC 24 0
-Mercedes-Benz S 400 Gasoline Automatic 06 KAS 56 0
+Mercedes-Benz CLA-180d Diesel Automatic 06 ABC 06 3
+Mercedes-Benz C-180-Coupé Gasoline Automatic 06 DOC 24 0
+Mercedes-Benz S-400 Gasoline Automatic 06 KAS 56 0
 BMW 320i Gasoline Automatic 06 DUZ 31 0
 BMW 420d Diesel Automatic 06 PCA 5961 0
 BMW iX3 Electric Automatic 06 L 234 0
 Audi A3 Diesel Automatic 06 CAS 88 0
-Audi A7 Long Diesel Automatic 06 CIZ 765 0
+Audi A7-Long Diesel Automatic 06 CIZ 765 0
 Volvo XC-90 Diesel Automatic 06 DIF 009 0
-Volvo V-40 Cross Country Gasoline Automatic 06 CUM 909 0
-Hyundai i10 Gasoline & LPG Manuel 06 FN 232 0
-Hyundai i20 Gasoline & LPG Automatic 06 BYR 7890 0
+Volvo V-40-Cross-Country Gasoline Automatic 06 CUM 909 0
+Hyundai i10 Gasoline&LPG Manuel 06 FN 232 0
+Hyundai i20 Gasoline&LPG Automatic 06 BYR 7890 0
 Alfa-Romeo Tonale Diesel Automatic 06 AG 3245 0
 Alfa-Romeo Giulietta Diesel Manuel 06 PBA 566 0
 Alfa-Romeo Giulia Gasoline Automatic 06 BNN 65 0
